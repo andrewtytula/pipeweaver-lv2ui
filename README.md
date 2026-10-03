@@ -12,6 +12,22 @@ It is a separate program that talks to Pipeweaver over its normal websocket
 API. Nothing in Pipeweaver is modified. It is an unofficial companion, not
 part of or affiliated with the Pipeweaver project.
 
+## AI-generated: use with care
+
+This tool was written by an AI coding assistant (Claude) under the author's
+direction. The author tested that it works but has not reviewed the code line
+by line. Treat it accordingly:
+
+- It has only been run on one machine, against LSP plugins.
+- It is mostly `unsafe` Rust talking to C libraries, and it loads and runs
+  plugin code inside its own process. Bugs here can crash it.
+- It changes settings on filters in your live audio chain. Try it on a setup
+  you can afford to have misbehave before relying on it.
+- It comes with no warranty, as the license says.
+
+Bug reports are welcome. Read the code before trusting it with anything that
+matters.
+
 ## Requirements
 
 - Pipeweaver running, with its web server on `localhost:14565`
@@ -111,6 +127,10 @@ to that:
 ## License
 
 MIT, see [LICENSE](LICENSE).
+
+Because the code is AI-generated, some or all of it may not be protected by
+copyright in some countries, in which case you need no license to use it
+there. Where copyright does apply, the MIT license is the grant.
 
 The shadow's PipeWire filter node is set up the way Pipeweaver sets up its own
 filters, with its source as the reference. Pipeweaver is MIT licensed,
